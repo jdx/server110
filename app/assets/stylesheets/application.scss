@@ -1,1 +1,21 @@
 @import "bootstrap";
+
+#calendar {
+   tr {
+    td {
+      padding: 5px;
+    }
+    th, td {
+      border: 1px solid #bbb;
+    }
+    .today {
+      background-color: #bbb;
+    }
+  }
+}
+
+.task.reviewed {
+  .title {
+    text-decoration: line-through;
+  }
+}

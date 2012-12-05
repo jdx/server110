@@ -1,0 +1,10 @@
+- if @date.today?
+  Before you go to bed, check off tasks that you've reviewed:
+%ul
+  - @tasks.each do |t|
+    %li.task{ class: t.reviewed ? 'reviewed' : '', data: { task_id: t.id } }
+      - if @date.today?
+        %input.review_checkbox{ type: 'checkbox',  checked: t.reviewed }
+      %span.title= t
+- if @date.today?
+  = link_to "Add Task", new_task_path

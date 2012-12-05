@@ -1,3 +1,3 @@
 = simple_form_for @task do |f|
-  = f.input :title
-  = f.submit class: 'btn btn-primary'
+  = f.input :title, label: "What did you do?"
+  = f.submit "Add task", class: 'btn btn-primary'
