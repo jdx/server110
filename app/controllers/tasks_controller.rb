@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   end
 
   def review
-    @task = current_user.tasks.on_day(Date.today).find(params[:id])
+    @task = current_user.tasks.on_day(Time.zone.today).find(params[:id])
     @task.reviewed = params[:reviewed]
     @task.save!
 
