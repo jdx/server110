@@ -13,7 +13,7 @@
     %tr
       - (0..6).each do |d|
         - date = start_date + w.weeks + d.days
-        - if date == date.today? or current_user.tasks.on_day(date).any?
+        - if date.today? or current_user.tasks.on_day(date).any?
           %td{ class: date.today? ? "today" : "" }= link_to date.to_s(:short), day_path(date)
         - else
           %td= date.to_s(:short)

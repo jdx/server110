@@ -1,5 +1,5 @@
 - if @date.today?
-  Before you go to bed, check off tasks that you've reviewed:
+  .lead Before you go to bed, check off tasks that you've reviewed
 %ul
   - @tasks.each do |t|
     %li.task{ class: t.reviewed ? 'reviewed' : '', data: { task_id: t.id } }

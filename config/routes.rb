@@ -1,8 +1,9 @@
 Server110::Application.routes.draw do
+  devise_for :users
+
   use_doorkeeper
 
   root to: 'days#index'
-  match "auth/twitter/callback" => 'omniauth#twitter'
 
   resources :tasks do
     member do

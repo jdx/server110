@@ -2,16 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 
-gem 'pg'
-gem 'rabl-rails'
-gem 'haml-rails'
 gem 'dalli'
-gem 'thin'
+gem 'devise'
+gem 'doorkeeper'
+gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'simple_form'
+gem 'pg'
 gem 'plist'
-gem 'doorkeeper'
+gem 'rabl-rails'
+gem 'simple_form'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

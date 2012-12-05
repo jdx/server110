@@ -6,8 +6,20 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar
-      .navbar-inner
-        = link_to "110%", root_path, class: 'brand'
-    .container
-      = yield
+    #wrap
+      .navbar
+        .navbar-inner
+          = link_to "110%", root_path, class: 'brand'
+          %ul.nav
+            - if signed_in?
+              %li= link_to "Signout", destroy_user_session_path
+      .container
+        - if notice
+          %p.notice= notice
+        - if alert
+          %p.alert= alert
+        = yield
+      #push
+    #footer
+      .container
+        %p.muted.credit Site by #{ link_to "@dickeyxxx", "http://dickey.xxx" }
