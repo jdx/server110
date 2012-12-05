@@ -5,6 +5,6 @@
     %li.task{ class: t.reviewed ? 'reviewed' : '', data: { task_id: t.id } }
       - if @date.today?
         %input.review_checkbox{ type: 'checkbox',  checked: t.reviewed }
-      %span.title= t
+      %span.title= t.title
 - if @date.today?
   = link_to "Add Task", new_task_path

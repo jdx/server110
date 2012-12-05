@@ -4,12 +4,14 @@
    tr {
     td {
       padding: 5px;
+      height: 75px;
+      text-align: center;
     }
     th, td {
       border: 1px solid #bbb;
     }
     .today {
-      background-color: #bbb;
+      background-color: #eee;
     }
   }
 }
