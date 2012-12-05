@@ -5,10 +5,16 @@ class Task < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :user
+  before_create :set_date
 
   def to_s
     "#{title} #{created_at.to_s(:short)}"
   end
 
-  scope :on_day, ->(day) { where created_at: day.beginning_of_day..day.end_of_day }
+  private
+
+  def set_date
+    self.date = Time.zone.today
+  end
+
 end
