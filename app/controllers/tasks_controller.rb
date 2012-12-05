@@ -7,7 +7,7 @@ class TasksController < ApplicationController
     @task = Task.new(params[:task])
     @task.user = current_user
     if @task.save
-      redirect_to day_path(Date.today)
+      redirect_to day_path(Time.zone.today)
     else
       render :new
     end
