@@ -10,9 +10,10 @@
       .navbar
         .navbar-inner
           = link_to "110%", root_path, class: 'brand'
-          %ul.nav
-            - if signed_in?
+          - if signed_in?
+            %ul.nav
               %li= link_to "Signout", destroy_user_session_path
+            %p.navbar-text.pull-right Logged in as #{current_user}
       .container
         - if notice
           %p.notice= notice
