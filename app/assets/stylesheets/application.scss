@@ -1,26 +1,5 @@
 @import "bootstrap";
+@import "calendar";
 @import "footer";
-
-#calendar {
-   tr {
-    td {
-      padding: 5px;
-      height: 75px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid #bbb;
-    }
-    .today {
-      background-color: #eee;
-    }
-  }
-}
-
-.task.reviewed {
-  .title {
-    text-decoration: line-through;
-  }
-}
 
 @import "bootstrap-responsive";

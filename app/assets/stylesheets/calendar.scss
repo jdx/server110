@@ -1,0 +1,32 @@
+#calendar {
+   tr {
+    > td {
+      padding: 5px;
+      text-align: center;
+      height: 75px;
+      color: #bbb;
+      > a {
+        display: block;
+        line-height: 75px;
+      }
+    }
+    > th, > td {
+      border: 1px solid #bbb;
+    }
+    > .today {
+      background-color: #7DBEFF;
+      > a {
+        color: #fff;
+      }
+    }
+    > .future {
+      background-color: #eee;
+    }
+  }
+}
+
+.task.reviewed {
+  .title {
+    text-decoration: line-through;
+  }
+}
