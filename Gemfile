@@ -33,6 +33,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'spork'
   gem 'simplecov', require: false
   gem 'rb-fsevent'

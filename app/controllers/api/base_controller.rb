@@ -1,8 +1,8 @@
-class Api::BaseController < ActionController::Metal
-  include AbstractController::Callbacks
-  include ActionController::Head
-  include Doorkeeper::Helpers::Filter
+class Api::BaseController < ApplicationController
+  skip_before_filter :authenticate_user!
+
   doorkeeper_for :all
+  respond_to :json
 
   private
 
