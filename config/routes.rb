@@ -13,6 +13,7 @@ Server110::Application.routes.draw do
   resources :days
 
   namespace :api do
+    resources :days
     resources :tasks
   end
 end
