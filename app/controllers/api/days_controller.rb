@@ -8,12 +8,12 @@ module Api
       @days = []
       (start_date..end_date).each do |d|
         @days << {
-          day: d,
+          date: d,
           tasks: current_user.tasks.where(date: d),
         }
       end
 
-      respond_with @days
+      render json: @days, content_type: 'application/json'
     end
   end
 end
